@@ -28,15 +28,14 @@ $(window).ready(function() {
             data : form_info,
             dataType: 'json',
             contentType: "application/json; charset=utf-8",
-            // headers: {'Access-Control-Allow-Origin': true},
             success: function(resp) {
-                $('#response-title').text('SUCCESS');
-                $('#response-details').text('You have successfully RSVPed.<br>See you at the meeting!');
+                $('#response-title').html('SUCCESS');
+                $('#response-details').html('You have successfully RSVPed.<br>See you at the meeting!');
                 $('#response-container').addClass('animated bounceIn');
             },
-            always: function(resp) {
-                $('#response-title').text('UPS! SOMETHING WENT WRONG.');
-                $('#response-details').text(resp);
+            fail: function(resp) {
+                $('#response-title').html('UPS! SOMETHING WENT WRONG.');
+                $('#response-details').html(resp);
                 $('#response-container').addClass('animated bounceIn');
             }
         });
