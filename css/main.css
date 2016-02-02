@@ -1,0 +1,182 @@
+@font-face {
+    font-family: "Zona Pro Thin";
+    src: url("../src/ZonaProThin.otf");
+}
+
+@font-face {
+    font-family: "Zona Pro Bold";
+    src: url("../src/ZonaProBold.otf");
+}
+
+html {
+   
+    height: 100%;
+    width: 100%;    
+}
+
+body {
+	
+	background-color: #303037;
+    font-size: 1rem;
+    font-family: "Zona Pro Thin";
+    color: #fffdfb;
+}
+
+h1, h2, h3, h4 {
+    
+    text-align: center;
+    font-family: "Zona Pro Bold";
+    color: #5bc9f4;
+}
+
+h1 {
+    
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.main-container {
+    
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.container {
+    
+    position: relative;
+    margin: 1rem auto;
+    display: block;
+    width: 90%;
+}
+
+.button {
+    
+    text-decoration: none;
+    display: inline-block;
+    font-family: "Zona Pro Thin";
+    letter-spacing: 0.3rem;
+    margin: 2rem 0 0 0;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.5rem;
+    outline: 0;
+    font-size: 1.5rem;
+    color: #fffdfb;
+}
+
+.button.red {
+    
+    border: 0.5rem solid #ea6778;    
+    background: #ea6778;
+}
+
+.button.blue {
+    
+    border: 0.5rem solid #5bc9f4;    
+    background: #5bc9f4;
+}
+
+.button.small {
+    
+    letter-spacing: 0.1rem;
+    padding: 0.1rem 0.2rem;
+    font-size: 1rem;
+}
+
+.button:hover {
+    
+    background: #fffdfb;
+    color: #303037;
+    border: 0.5rem solid #fffdfb;
+}
+
+#logo {
+	
+    max-width: 90% !important;
+    display: block;
+    margin: 0 auto;
+}
+
+.logo.small {
+    
+    max-width: 70%;
+    display: block;
+    margin: 1rem auto;
+}
+
+input[type="text"] {
+ 
+    height: 1rem;
+    font-size: 0.8rem;
+    font-family: "Zona Pro Thin";
+    width: 100%;
+    border: 0.2rem solid white;
+    border-radius: 0.2rem;
+}
+
+[class*='col-'] {
+    
+    float: left;
+}
+
+.row {
+    
+    display: block;
+    width: 100%;
+}
+
+[class*='col-1-2'] {
+    
+    width: 50%;
+}
+
+select {
+    
+    width: 100%;
+}
+
+label {
+    
+    margin: 1rem 0;
+}
+
+.radio-item {
+    
+    width: 100%;
+}
+
+input {
+    
+    margin: 0.5rem 0;
+}
+
+.rsvp-title {
+    
+    margin-bottom: 0.5rem;
+}
+
+hr {
+    
+    margin: 1rem 0;
+}
+
+.form-item {
+    
+    margin: 1rem 0;
+}
+
+#response-container {
+    
+    width: 100%;
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
