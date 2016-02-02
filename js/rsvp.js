@@ -7,7 +7,7 @@ $(window).ready(function() {
         
         setTimeout(function() {
             container.remove();
-            $('#response-container').show().addClass('animated bounceIn');
+            // $('#response-container').show().addClass('animated bounceIn');
         }, 1000);
         
         var form_info = {
@@ -16,15 +16,14 @@ $(window).ready(function() {
             'email': $('#email').val(),
             'phone': $('#phone').val(),
             'academic_level': $('#academic-level').val(),
-            'gender': $('#gender').val(),            
+            'gender': $("input[name=gender]:checked").val(),
             'race': $('#race').val(),
-            'date_of_birth': $('#birth').val(),
-            'news': $('#news').val(),
-            'professions': []
+            'roles': $('#roles').val(),
+            'news': $('#news').val()
         }
         
         $.ajax({
-            url: 'http://162.243.24.237:5000/rsvp-submit',
+            url: './rsvp',
             type: 'POST',
             data : form_info,
             dataType: 'json',

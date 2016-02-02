@@ -68,15 +68,15 @@
                         <label for="gender" style="margin-bottom:5px; display:inline-block; margin-top:0;">Gender</label>
                             <br>
                             <label class="radio-item" for="female">
-                            <input type="radio" name="gender" value="female" id="gender">
+                            <input type="radio" name="gender" value="female" id="female">
                             Female</label>
                             <br>
                             <label class="radio-item" for="male">
-                            <input type="radio" name="gender" value="male" id="gender">
+                            <input type="radio" name="gender" value="male" id="male">
                             Male</label>
                             <br>
                             <label class="radio-item" for="other">
-                            <input type="radio" name="gender" value="other" id="gender">
+                            <input type="radio" name="gender" value="other" id="other">
                             Other
                             <br>
                             </label>
@@ -107,16 +107,17 @@
                     </div>
 					<div class="form-item">
                         <label for="news-true" style="margin-bottom:5px; display:inline-block; margin-top:0;">Receive news?</label>
-						<br>
+                        <input type="checkbox" id="news" style="margin-left:0.5rem;" value="true" checked>
+                        <!--<br>
 						<label class="radio-item" for="news-true">
-						<input type="radio" name="news" value="true" id="news-true">
+						<input type="radio" name="news" value="true" id="news-true" checked>
 						Yes</label><br/>
 						<label class="radio-item" for="news-false">
 						<input type="radio" name="news" value="false" id="news-false">
-						No</label>
+						No</label>-->
 				</div>
                 </div>
-                <input type="submit" class="button red small" id="submit-rsvp-button" value="SUBMIT">
+                <input type="submit" style="display: block; margin: 0 auto;" class="button red small" id="submit-rsvp-button" value="SUBMIT">
             </form>
         </div>
         <div id="response-container" style="display: none;">
