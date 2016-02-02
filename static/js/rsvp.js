@@ -36,7 +36,7 @@ $(window).ready(function() {
             error: function(resp) {
                 console.log(resp)
                 $('#response-title').html('UPS! SOMETHING WENT WRONG.');
-                $('#response-details').html(resp);
+                $('#response-details').html(resp.responseText.description);
                 $('#response-container').show().addClass('animated bounceIn');
             }
         });
