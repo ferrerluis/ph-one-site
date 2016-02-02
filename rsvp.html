@@ -96,8 +96,26 @@
                             <option value="islander">Native Hawaiian or Other Pacific Islander</option>
                         </select>
                     </div>
+					
+					<div class="form-item">
+                        <label for="roles" style="margin-bottom:8px;display:inline-block; margin-top:0;">Which roles do you identify with?</label>
+                        <select name="roles" id="roles" multiple="true">
+                            <option value="hacker">Hacker</option>
+                            <option value="hipster">Hipster</option>
+                            <option value="hustler">Hustler</option>
+                        </select>
+                    </div>
+					<div class="form-item">
+                        <label for="news-true" style="margin-bottom:5px; display:inline-block; margin-top:0;">Receive news?</label>
+						<br>
+						<label class="radio-item" for="news-true">
+						<input type="radio" name="news" value="true" id="news-true">
+						Yes</label><br/>
+						<label class="radio-item" for="news-false">
+						<input type="radio" name="news" value="false" id="news-false">
+						No</label>
+				</div>
                 </div>
-                
                 <input type="submit" class="button red small" id="submit-rsvp-button" value="SUBMIT">
             </form>
         </div>

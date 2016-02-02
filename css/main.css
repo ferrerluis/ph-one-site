@@ -60,7 +60,7 @@ h1 {
     display: inline-block;
     font-family: "Zona Pro Thin";
     letter-spacing: 0.3rem;
-    margin: 2rem 0 0 0;
+    margin: .7rem 0 0 0;
     padding: 0.2rem 0.6rem;
     border-radius: 0.5rem;
     outline: 0;
@@ -140,7 +140,7 @@ select {
     border: 0;
 	font-size:.9em;
     border-radius: 0;
-    height: 26px;
+    min-height: 26px;
 }
 
 label {
