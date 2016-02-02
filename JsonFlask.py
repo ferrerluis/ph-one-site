@@ -16,7 +16,7 @@ def JsonFlask(import_name, **kwargs):
     """
     def make_json_error(ex):
 	try:
-	        response = jsonify(message=str(ex) + '. ' + ex.description)
+	        response = jsonify(message=str(ex), description=ex.description)
 	except AttributeError:
  	        response = jsonify(message=str(ex))
         response.status_code = (ex.code

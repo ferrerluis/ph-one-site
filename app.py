@@ -28,21 +28,21 @@ def rsvp():
 
 		member_info = json
 
+		if '' in member_info.values():
+			abort(400, 'Form not completed')
+
 		for key in member_info:
-			member_info[key] = member_info[key].strip()
+			member_info[key] = member_info[key].strip().lower()
 
 		member_info['phone'] = re.sub('[^0-9+]', '', member_info['phone'])
 
 		if len(member_info['phone']) < 10 or len(member_info['phone']) > 12:
-			print 'Phone not valid'
 			abort(400, 'Phone number is not valid')
 
 		if not re.match('^...+@(student\.)?gsu\.edu$', member_info['email']):
-			print 'Email not valid'
 			abort(400, 'Email is not valid')
 
 		if not roles_info:
-			print 'No roles listed'
 			abort(400, 'No roles listed')
 
 		try:
@@ -50,8 +50,7 @@ def rsvp():
 			roles = [Role.create(name=name, member=member) for name in roles_info]
 
 		except Exception as err:
-			print str(err) + 'Some error'
-			abort(400, 'Other error: ' + str(err))
+			abort(400, str(err))
 
 		resp = jsonify(request.get_json(force=True))
 		resp.status_code = 200
