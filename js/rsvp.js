@@ -18,6 +18,7 @@ $(window).ready(function() {
             data : form_info,
             dataType: 'json',
             contentType: "application/json; charset=utf-8",
+            headers: {'Access-Control-Allow-Origin': true},
             success: function(resp) {
                 $('#response-title').text('SUCCESS');
                 $('#response-details').text('You have successfully RSVPed.<br>See you at the meeting!');
