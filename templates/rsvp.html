@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Meeting 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/mobile.css">
+    <link rel="stylesheet" href="static/css/animate.css">
+</head>
+<body>
+    <div class="body-container">
+        <a href="./">
+            <img class="logo small" src="static/src/logo_300.png" alt="Meeting 1 Logo">
+        </a>
+        <hr>
+        <div class="container" id="rsvp-container">
+            <h1 class="rsvp-title">RSVP Form</h1>
+            
+            <form action="#" id="rsvp-form">
+
+                <div class="form-section">
+                    <div class="row">
+                        <div class="col-1-2-m">
+                            <label for="first-name">First Name</label>
+			    <br>
+                            <input type="text" id="first-name">
+                        </div>
+                        <div class="col-1-2-m">
+                            <label for="last-name">Last Name</label>
+			    <br>
+                            <input type="text" id="last-name">
+                        </div>                    
+                    </div>
+
+                    <div class="row">
+                        <div class="col-1-2-m">
+                            <label for="email">Email</label>
+			    <br>
+                            <input type="text" id="email">
+                        </div>
+                        <div class="col-1-2-m">
+                            <label for="phone">Phone</label>
+			    <br>
+                            <input type="text" id="phone">
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                
+                <div class="form-section">
+                    <div class="form-item">
+                        <div class="row">
+                            <div class="col-1-2">
+                                <label for="academic-level" style="margin-top:6px;display:inline-block;margin-bottom:0;">Academic Level</label>                            
+                            </div>
+                            <div class="col-1-2">
+                                <select name="academic-level" id="academic-level">
+                                    <option value="freshman">Freshman</option>
+                                    <option value="sophomore">Sophomore</option>
+                                    <option value="junior">Junior</option>
+                                    <option value="senior">Senior</option>
+                                    <option value="graduate">Graduate/Ph.D.</option>
+                                    <option value="faculty">Faculty/Staff</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-item">
+                        <label for="gender" style="margin-bottom:5px; display:inline-block; margin-top:0;">Gender</label>
+                            <br>
+                            <label class="radio-item" for="female">
+                            <input type="radio" name="gender" value="female" id="female">
+                            Female</label>
+                            <br>
+                            <label class="radio-item" for="male">
+                            <input type="radio" name="gender" value="male" id="male">
+                            Male</label>
+                            <br>
+                            <label class="radio-item" for="other">
+                            <input type="radio" name="gender" value="other" id="other">
+                            Other
+                            <br>
+                            </label>
+                            <input type="text" id="other-gender">
+                    </div>
+                    
+                    <div class="form-item">
+                        <label for="race" style="margin-bottom:8px;display:inline-block; margin-top:0;">Race/Ethnicity</label>
+                        <select name="race" id="race">
+                            <option value="white">Non-Hispanic White or Euro-American</option>
+                            <option value="black">Black or African American</option>
+                            <option value="east-asian">East Asian or Asian American</option>
+                            <option value="south-asian">South Asian or Indian American</option>
+                            <option value="arab">Middle Eastern or Arab American</option>
+                            <option value="hispanic">Latino or Hispanic American</option>
+                            <option value="american-indian">American Indian or Alaska Native</option>
+                            <option value="islander">Native Hawaiian or Other Pacific Islander</option>
+                        </select>
+                    </div>
+					
+					<div class="form-item">
+                        <label for="roles" style="margin-bottom:8px;display:inline-block; margin-top:0;">Which roles do you identify with?</label>
+                        <select name="roles" id="roles" multiple="true">
+                            <option value="hacker">Hacker</option>
+                            <option value="hipster">Hipster</option>
+                            <option value="hustler">Hustler</option>
+                        </select>
+                    </div>
+					<div class="form-item">
+                        <label for="news-true" style="margin-bottom:5px; display:inline-block; margin-top:0;">Receive news?</label>
+                        <input type="checkbox" id="news" style="margin-left:0.5rem;" value="true" checked>
+                        <!--<br>
+						<label class="radio-item" for="news-true">
+						<input type="radio" name="news" value="true" id="news-true" checked>
+						Yes</label><br/>
+						<label class="radio-item" for="news-false">
+						<input type="radio" name="news" value="false" id="news-false">
+						No</label>-->
+				</div>
+                </div>
+                <input type="submit" style="display: block; margin: 0 auto;" class="button red small" id="submit-rsvp-button" value="SUBMIT">
+            </form>
+        </div>
+        <div id="response-container" style="display: none;">
+            <h1 id="response-title">Some Title</h1>
+            <p id="response-details">Some details</p>
+        </div>
+    </div>
+   
+    <script src="static/js/jquery.min.js"></script>
+	<script src="static/js/rsvp.js"></script>
+</body>
+</html>
