@@ -28,11 +28,13 @@ $(window).ready(function() {
             dataType: 'json',
             contentType: "application/json; charset=utf-8",
             success: function(resp) {
+                console.log(resp)                
                 $('#response-title').html('SUCCESS');
                 $('#response-details').html('You have successfully RSVPed.<br>See you at the meeting!');
                 $('#response-container').show().addClass('animated bounceIn');
             },
             error: function(resp) {
+                console.log(resp)
                 $('#response-title').html('UPS! SOMETHING WENT WRONG.');
                 $('#response-details').html(resp);
                 $('#response-container').show().addClass('animated bounceIn');
