@@ -31,16 +31,18 @@ $(window).ready(function() {
                 console.log(resp)                
                 $('#response-title').addClass('blue').html('SUCCESS');
                 $('#response-details').html('You have successfully RSVPed.<br>See you at the meeting!');
-                $('#response-container').show().addClass('animated bounceIn');
             },
             error: function(resp) {
                 console.log(JSON.parse(resp.responseText).description);
                 console.log(resp)
-                $('#response-title').addClass('red').html('UPS! SOMETHING WENT WRONG.');
+                $('#response-title').addClass('red').html('OOPS! SOMETHING WENT WRONG.');
                 $('#response-details').html('Error: ' + JSON.parse(resp.responseText).description +
-                '<br><br>If the error persists, please email <a href="mailto:hello@pantherhackers.com">hello@pantherhackers.com<a>.');
-                $('#response-container').show().addClass('animated bounceIn');
+                '<br><br>If the error persists, please email <a href="mailto:hello@pantherhackers.com">hello@pantherhackers.com<a>.'); 
             }
         });
+	
+	setTimeout(function () {
+		$('#response-container').show().addClass('animated bounceIn');
+	}, 500);
     });
 });

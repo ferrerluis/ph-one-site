@@ -29,7 +29,7 @@ def rsvp():
 		member_info = json
 
 		if '' in member_info.values():
-			abort(400, 'Form not completed')
+			abort(400, 'Form was not completed')
 
 		for key in member_info:
 			member_info[key] = member_info[key].strip().lower()
@@ -37,13 +37,13 @@ def rsvp():
 		member_info['phone'] = re.sub('[^0-9+]', '', member_info['phone'])
 
 		if len(member_info['phone']) < 10 or len(member_info['phone']) > 12:
-			abort(400, 'Phone number is not valid')
+			abort(400, 'Invalid phone number')
 
 		if not re.match('^...+@(student\.)?gsu\.edu$', member_info['email']):
-			abort(400, 'Email is not valid')
+			abort(400, 'Invalid GSU email')
 
 		if not roles_info:
-			abort(400, 'No roles listed')
+			abort(400, 'Select at least one role')
 
 		try:
 			member = Member.create(**member_info)
@@ -62,4 +62,4 @@ def rsvp():
 
 if __name__ == '__main__':
 	sys.stdout.flush()
-	app.run(host='0.0.0.0')
+	app.run(host='0.0.0.0', port=80)
