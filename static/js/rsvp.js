@@ -7,7 +7,6 @@ $(window).ready(function() {
         
         setTimeout(function() {
             container.remove();
-            // $('#response-container').show().addClass('animated bounceIn');
         }, 1000);
         
         var form_info = {
@@ -29,13 +28,13 @@ $(window).ready(function() {
             dataType: 'json',
             contentType: "application/json; charset=utf-8",
             success: function(resp) {
-                $('#response-title').text('SUCCESS');
-                $('#response-details').text('You have successfully RSVPed.<br>See you at the meeting!');
+                $('#response-title').html('SUCCESS');
+                $('#response-details').html('You have successfully RSVPed.<br>See you at the meeting!');
                 $('#response-container').show().addClass('animated bounceIn');
             },
             always: function(resp) {
-                $('#response-title').text('UPS! SOMETHING WENT WRONG.');
-                $('#response-details').text(resp);
+                $('#response-title').html('UPS! SOMETHING WENT WRONG.');
+                $('#response-details').html(resp);
                 $('#response-container').show().addClass('animated bounceIn');
             }
         });
