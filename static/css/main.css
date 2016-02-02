@@ -26,7 +26,6 @@ h1, h2, h3, h4 {
     
     text-align: center;
     font-family: "Zona Pro Bold";
-    color: #5bc9f4;
 }
 
 h1 {
@@ -92,6 +91,11 @@ h1 {
     background: #fffdfb;
     color: #303037;
     border: 0.5rem solid #fffdfb;
+}
+
+a {
+    
+    color: #fffdfb;
 }
 
 red {
