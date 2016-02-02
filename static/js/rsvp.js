@@ -15,7 +15,7 @@ $(window).ready(function() {
             'email': $('#email').val(),
             'phone': $('#phone').val(),
             'academic_level': $('#academic-level').val(),
-            'gender': $("input[name=gender]:checked").val() != '' ? $("input[name=gender]:checked").val() : $("#other-gender").val(),
+            'gender': $("#other").is(':checked') ? $("#other-gender").val() : $("input[name=gender]:checked").val(),
             'race': $('#race').val(),
             'roles': $('#roles').val(),
             'news': $('#news').val()
