@@ -19,7 +19,8 @@ $(window).ready(function() {
             'gender': $('#gender').val(),            
             'race': $('#race').val(),
             'date_of_birth': $('#birth').val(),
-            'news': $('#news').val()
+            'news': $('#news').val(),
+            'professions': []
         }
         
         $.ajax({
@@ -28,7 +29,7 @@ $(window).ready(function() {
             data : form_info,
             dataType: 'json',
             contentType: "application/json; charset=utf-8",
-            headers: {'Access-Control-Allow-Origin': true},
+            // headers: {'Access-Control-Allow-Origin': true},
             success: function(resp) {
                 $('#response-title').text('SUCCESS');
                 $('#response-details').text('You have successfully RSVPed.<br>See you at the meeting!');
