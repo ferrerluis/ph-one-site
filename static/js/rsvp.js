@@ -34,11 +34,10 @@ $(window).ready(function() {
                 $('#response-container').show().addClass('animated bounceIn');
             },
             error: function(resp) {
-                console.log(resp.responseText['description'])
-                console.log(resp.responseText)
+                console.log(JSON.parse(resp.responseText).description);
                 console.log(resp)
                 $('#response-title').html('UPS! SOMETHING WENT WRONG.');
-                $('#response-details').html(resp.responseText['description']);
+                $('#response-details').html(JSON.parse(resp.responseText).description);
                 $('#response-container').show().addClass('animated bounceIn');
             }
         });
