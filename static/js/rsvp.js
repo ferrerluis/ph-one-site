@@ -32,7 +32,7 @@ $(window).ready(function() {
                 $('#response-details').html('You have successfully RSVPed.<br>See you at the meeting!');
                 $('#response-container').show().addClass('animated bounceIn');
             },
-            always: function(resp) {
+            fail: function(resp) {
                 $('#response-title').html('UPS! SOMETHING WENT WRONG.');
                 $('#response-details').html(resp);
                 $('#response-container').show().addClass('animated bounceIn');
