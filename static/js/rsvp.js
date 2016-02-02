@@ -34,7 +34,7 @@ $(window).ready(function() {
                 $('#response-container').show().addClass('animated bounceIn');
             },
             error: function(resp) {
-                console.log(resp)
+                console.log(resp.responseText.description)
                 $('#response-title').html('UPS! SOMETHING WENT WRONG.');
                 $('#response-details').html(resp.responseText.description);
                 $('#response-container').show().addClass('animated bounceIn');
