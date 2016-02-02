@@ -10,7 +10,17 @@ $(window).ready(function() {
             $('#response-container').show().addClass('animated bounceIn');
         }, 1000);
         
-        var form_info = JSON.stringify($('#rsvp-form').serializeArray());
+        var form_info = {
+            'first_name': $('#first-name').val(),
+            'last_name': $('#last-name').val(),
+            'email': $('#email').val(),
+            'phone': $('#phone').val(),
+            'academic_level': $('#academic-level').val(),
+            'gender': $('#gender').val(),            
+            'race': $('#race').val(),
+            'date_of_birth': $('#birth').val(),
+            'news': $('#news').val()
+        }
         
         $.ajax({
             url: 'http://162.243.24.237:5000/rsvp-submit',
