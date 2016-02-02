@@ -1,7 +1,7 @@
 $(window).ready(function() {
    
-    $('#submit-rsvp-button').click( function () {
-    
+    $('#rsvp-form').submit( function (e) {
+        e.preventDefault();
         var container = $('#rsvp-container');
         container.addClass('animated bounceOut');
         
@@ -10,12 +10,13 @@ $(window).ready(function() {
             $('#response-container').show().addClass('animated bounceIn');
         }, 1000);
         
-        var form_info = $('#rsvp-form').serialize();
+        var form_info = JSON.stringify($('#rsvp-form').serializeArray());
         
         $.ajax({
             url: 'http://162.243.24.237:5000/rsvp-submit',
             type: 'POST',
             data : form_info,
+            dataType: 'json',
             contentType: "application/json; charset=utf-8",
             success: function(resp) {
                 $('#response-title').text('SUCCESS');
