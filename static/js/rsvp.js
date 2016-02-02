@@ -15,7 +15,7 @@ $(window).ready(function() {
             'email': $('#email').val(),
             'phone': $('#phone').val(),
             'academic_level': $('#academic-level').val(),
-            'gender': $("input[name=gender]:checked").val(),
+            'gender': $("input[name=gender]:checked").val() != '' ? $("input[name=gender]:checked").val() : $("#other-gender").val(),
             'race': $('#race').val(),
             'roles': $('#roles').val(),
             'news': $('#news').val()
@@ -29,7 +29,7 @@ $(window).ready(function() {
             contentType: "application/json; charset=utf-8",
             success: function(resp) {
                 console.log(resp)                
-                $('#response-title').html('SUCCESS');
+                $('#response-title').addClass('blue').html('SUCCESS');
                 $('#response-details').html('You have successfully RSVPed.<br>See you at the meeting!');
                 $('#response-container').show().addClass('animated bounceIn');
             },
