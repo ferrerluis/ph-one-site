@@ -36,8 +36,9 @@ $(window).ready(function() {
             error: function(resp) {
                 console.log(JSON.parse(resp.responseText).description);
                 console.log(resp)
-                $('#response-title').html('UPS! SOMETHING WENT WRONG.');
-                $('#response-details').html(JSON.parse(resp.responseText).description);
+                $('#response-title').addClass('red').html('UPS! SOMETHING WENT WRONG.');
+                $('#response-details').html(JSON.parse(resp.responseText).description +
+                '<br>If the error persists, please email <a href="mailto:hello@pantherhackers.com">hello@pantherhackers.com<a>.');
                 $('#response-container').show().addClass('animated bounceIn');
             }
         });

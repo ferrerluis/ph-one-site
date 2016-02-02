@@ -94,6 +94,16 @@ h1 {
     border: 0.5rem solid #fffdfb;
 }
 
+red {
+    
+    color: #ea6778;
+}
+
+blue {
+    
+    color: #5bc9f4;
+}
+
 #logo {
 	
     max-width: 90% !important;
