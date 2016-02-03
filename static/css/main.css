@@ -190,9 +190,15 @@ input[type="text"] {
     border-radius: 0.2rem;
 }
 
+input[type="checkbox"] {
+    
+    margin-bottom: 2rem;
+}
+
 [class*='col-'] {
     
     float: left;
+    overflow: hidden;
 }
 
 .row {
