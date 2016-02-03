@@ -7,24 +7,25 @@ function showResponse(time) {
 
 function animateForm(time) {
     
+    var container = $('#rsvp-container');
+        
     $('body').animate({
-            scrollTop: $("body").offset().top
-        }, time);
+        scrollTop: $("body").offset().top
+    }, time);
         
-        setTimeout(function() {
-            container.addClass('animated bounceOut');
-        }, time);
+    setTimeout(function() {
+        container.addClass('animated bounceOut');
+    }, time);
         
-        setTimeout(function() {
-            container.hide();
-        }, time + 500);
+    setTimeout(function() {
+        container.hide();
+    }, time + 500);
 }
 
 $(window).ready(function() {
    
     $('#rsvp-form').submit(function (e) {
         e.preventDefault();
-        var container = $('#rsvp-container');
         
         animateForm(500);
         
