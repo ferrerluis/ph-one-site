@@ -15,6 +15,7 @@ class Member(BaseModel):
 	gender = peewee.CharField(max_length=15, null=True)
 	race = peewee.CharField(null=True)
 	news = peewee.BooleanField(default=True)
+	heard = peewee.CharField(max_length=30)
 
 class Role(BaseModel):
 	name = peewee.CharField(max_length=30)
