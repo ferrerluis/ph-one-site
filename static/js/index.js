@@ -15,8 +15,12 @@ $(window).ready(function() {
 	
 	});
     
-    $('#arrow').click(function () {
+    $("#arrow").click(function() {
         
-        $('#content').ScrollTo();
+        $('#arrow').addClass('animate flash');
+        
+        $('html, body').animate({
+            scrollTop: $("#content").offset().top
+        }, 500);
     });
 });

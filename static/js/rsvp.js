@@ -6,7 +6,7 @@ $(window).ready(function() {
         container.addClass('animated bounceOut');
         
         setTimeout(function() {
-            container.remove();
+            container.hide();
         }, 1000);
         
         var heard = '';
