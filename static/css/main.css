@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Zona Pro Thin";
-    src: url("../src/ZonaProThin.otf");
+    src: url("../fonts/ZonaProThin.otf");
 }
 
 @font-face {
     font-family: "Zona Pro Bold";
-    src: url("../src/ZonaProBold.otf");
+    src: url("../fonts/ZonaProBold.otf");
 }
 
 html {
@@ -16,6 +16,7 @@ html {
 
 body {
 	
+    height: 100%;
 	background-color: #303037;
     font-size: 1rem;
     font-family: "Zona Pro Thin";
@@ -34,15 +35,38 @@ h1 {
     margin: 0;
 }
 
+.screen {
+    
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 3rem;
+}
+
 .main-container {
     
     text-align: center;
     display: block;
-    position: absolute;
+    position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+.arrow-down {
+    
+    position: relative;    
+    display: block;
+    text-align: center;
+    font-size: 4rem;
+    top: 70%;
+}
+
+#content {
+    
+    display: block;
+    position: relative;
 }
 
 .container {
@@ -59,7 +83,7 @@ h1 {
     display: inline-block;
     font-family: "Zona Pro Thin";
     letter-spacing: 0.3rem;
-    margin: .7rem 0 0 0;
+    margin: 2rem 0 0 0;
     padding: 0.2rem 0.6rem;
     border-radius: 0.5rem;
     outline: 0;
@@ -69,13 +93,13 @@ h1 {
 
 .button.red {
     
-    border: 0.5rem solid #ea6778;    
+    border: 0.2rem solid #ea6778;    
     background: #ea6778;
 }
 
 .button.blue {
     
-    border: 0.5rem solid #5bc9f4;    
+    border: 0.2rem solid #5bc9f4;    
     background: #5bc9f4;
 }
 
@@ -90,7 +114,7 @@ h1 {
     
     background: #fffdfb;
     color: #303037;
-    border: 0.5rem solid #fffdfb;
+    border: 0.2rem solid #fffdfb;
 }
 
 a {
@@ -149,6 +173,11 @@ input[type="text"] {
     width: 50%;
 }
 
+[class*='col-1-3'] {
+    
+    width: 33.33%;
+}
+
 select {    
     width: 100%;
     border: 0;
@@ -159,6 +188,11 @@ select {
 
 label {
     margin: 1rem 0;
+}
+
+label.title {
+    
+    font-family: "Zona Pro Bold";    
 }
 
 .radio-item {

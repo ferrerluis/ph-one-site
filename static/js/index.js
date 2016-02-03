@@ -1,4 +1,4 @@
-window.onload = function() {
+$(window).ready(function() {
 	
 	var rsvp_button = $("#button");
 	var logo = $("#logo");
@@ -14,4 +14,9 @@ window.onload = function() {
 		}, 1000);
 	
 	});
-}
+    
+    $('#arrow').click(function () {
+        
+        $('#content').ScrollTo();
+    });
+});
