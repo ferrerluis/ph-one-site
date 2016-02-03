@@ -22,27 +22,27 @@
                 <div class="form-section">
                     <div class="row">
                         <div class="col-1-2-m">
-                            <label for="first-name">First Name</label>
+                            <label class="title" for="first-name">First Name</label>
 			    <br>
-                            <input type="text" id="first-name">
+                            <input type="text" id="first-name" placeholder="Bill">
                         </div>
                         <div class="col-1-2-m">
-                            <label for="last-name">Last Name</label>
+                            <label class="title" for="last-name">Last Name</label>
 			    <br>
-                            <input type="text" id="last-name">
+                            <input type="text" id="last-name" placeholder="Gates">
                         </div>                    
                     </div>
 
                     <div class="row">
                         <div class="col-1-2-m">
-                            <label for="email">Email</label>
+                            <label class="title" for="email">Email</label>
 			    <br>
-                            <input type="text" id="email">
+                            <input type="text" id="email" placeholder="sjobs1@student.gsu.edu">
                         </div>
                         <div class="col-1-2-m">
-                            <label for="phone">Phone</label>
+                            <label class="title" for="phone">Phone</label>
 			    <br>
-                            <input type="text" id="phone">
+                            <input type="text" id="phone" placeholder="(404)283-29XX">
                         </div>
                     </div>
                 </div>
@@ -53,10 +53,10 @@
                     <div class="form-item">
                         <div class="row">
                             <div class="col-1-2">
-                                <label for="academic-level" style="margin-top:6px;display:inline-block;margin-bottom:0;">Academic Level</label>                            
+                                <label for="academic-level" class="title" style="margin-top:6px;display:inline-block;margin-bottom:0;">Academic Level</label>                            
                             </div>
                             <div class="col-1-2">
-                                <select name="academic-level" id="academic-level">
+                                <select style="margin-top: 0.2rem;" name="academic-level" id="academic-level">
                                     <option value="freshman">Freshman</option>
                                     <option value="sophomore">Sophomore</option>
                                     <option value="junior">Junior</option>
@@ -69,7 +69,7 @@
                     </div>
                     
                     <div class="form-item">
-                        <label for="gender" style="margin-bottom:5px; display:inline-block; margin-top:0;">Gender</label>
+                        <label for="gender" class="title" style="margin-bottom:5px; display:inline-block; margin-top:0;">Gender</label>
                             <br>
                             <label class="radio-item" for="female">
                             <input type="radio" name="gender" value="female" id="female">
@@ -80,7 +80,7 @@
                             Male</label>
                             <br>
                             <label class="radio-item" for="other">
-                            <input type="radio" name="gender" value="other" id="other">
+                            <input type="radio" name="gender" value="other" id="other-gender-radio">
                             Other
                             <br>
                             </label>
@@ -88,7 +88,7 @@
                     </div>
                     
                     <div class="form-item">
-                        <label for="race" style="margin-bottom:8px;display:inline-block; margin-top:0;">Race/Ethnicity</label>
+                        <label for="race" class="title" style="margin-bottom:8px;display:inline-block; margin-top:0;">Race/Ethnicity</label>
                         <select name="race" id="race">
                             <option value="white">Non-Hispanic White or Euro-American</option>
                             <option value="black">Black or African American</option>
@@ -102,21 +102,70 @@
                     </div>
 					
 					<div class="form-item">
-                        <label for="roles" style="margin-bottom:8px;display:inline-block; margin-top:0;">Which roles do you identify with?</label>
-                        <select name="roles" id="roles" multiple="true">
+                        <label for="roles" class="title" style="margin-bottom:8px;display:inline-block; margin-top:0;">Which roles do you identify with?</label>
+                        <br>
+                        <p style="margin: 0 0 0.5rem 0;">
+                            <i>(Press shift while clicking to select many)</i>                                                    
+                        </p>
+                        <select name="roles" id="roles" multiple="true" style="height: auto;">
                             <option value="hacker">Hacker (Technical)</option>
                             <option value="hipster">Hipster (Design)</option>
                             <option value="hustler">Hustler (Business)</option>
                         </select>
                     </div>
-					<div class="form-item"><div class="row">
-					<div class="col-1-2">
-                        <label for="news-true" style="margin-bottom:5px; display:inline-block; margin-top:0;">Do you want to receive our news?</label>
-					</div>
-					<div class="col-1-2">
-                        <input type="checkbox" id="news" style="margin-left:0.5rem;" value="true" checked>
-					</div>
-			</div></div>
+                    
+                    <div class="form-item">
+                        <label for="heard" class="title" style="margin-bottom:8px;display:inline-block; margin-top:0;">Where did you hear about us?</label>
+                        <br>
+                        <label class="radio-item" for="talk">
+                        <input type="radio" name="heard" value="talk" id="talk-radio">
+                         Someone came to my 
+                         <select style="width: auto;" name="talk-class" id="talk-class">
+                            <option value="csc2010">CSC 2010</option>
+                            <option value="csc2301">CSC 2301</option>
+                            <option value="csc2302">CSC 2302</option>
+                            <option value="csc2310">CSC 2310</option>
+                            <option value="csc2510">CSC 2510</option>
+                            <option value="csc3210">CSC 3210</option>
+                            <option value="csc3320">CSC 3320</option>
+                            <option value="csc3410">CSC 3410</option>
+                            <option value="eni3101">ENI 3101</option>
+                            <option value="eni3102">ENI 3102</option>
+                            <option value="eni3103">ENI 3103</option>
+                            <option value="grd3200">GRD 3200</option>
+                            <option value="grd4310">GRD 4310</option>
+                            <option value="mk3010">MK 3010</option>
+                            <option value="csc4841">CSC 4841</option>
+                            <option value="cis2010">CIS 2010</option>
+                         </select>
+                          class</label>
+                        <br>
+                        <label class="radio-item" for="got-email">
+                        <input type="radio" name="heard" value="email" id="got-email">
+                         I got an email</label>
+                        <br>
+                        <label class="radio-item" for="flyer">
+                        <input type="radio" name="heard" value="flyer" id="flyer">
+                         I saw a flyer</label>
+                        <br>
+                        <label class="radio-item" for="other">
+                        <input type="radio" name="heard" id="other-heard-radio">
+                         Other
+                        <br>
+                        </label>
+                        <input type="text" id="other-heard">
+                    </div>
+                    
+					<div class="form-item">
+                        <div class="row">
+                            <div class="col-1-2">
+                                <label class="title" for="news-true" style="margin-bottom:5px; display:inline-block; margin-top:0;">Do you want to receive our news?</label>
+                            </div>
+                            <div class="col-1-2">
+                                <input type="checkbox" id="news" style="margin-left:0.5rem;" value="true" checked>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <input type="submit" style="display: block; margin: 0 auto;" class="button red small" id="submit-rsvp-button" value="SUBMIT">
             </form>

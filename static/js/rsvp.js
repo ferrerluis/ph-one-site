@@ -1,6 +1,6 @@
 $(window).ready(function() {
    
-    $('#rsvp-form').submit( function (e) {
+    $('#rsvp-form').submit(function (e) {
         e.preventDefault();
         var container = $('#rsvp-container');
         container.addClass('animated bounceOut');
@@ -9,13 +9,27 @@ $(window).ready(function() {
             container.remove();
         }, 1000);
         
+        var heard = '';
+        
+        if ($("#other-heard-radio").is(':checked')) {
+            
+            heard = $("#other-heard").val();
+        }  else if ($("#talk").is(':checked')) {
+            
+            heard = $('#talk-class').val();
+        } else {
+            
+            heard = $("input[name=heard]:checked").val();
+        }
+        
         var form_info = {
             'first_name': $('#first-name').val(),
             'last_name': $('#last-name').val(),
             'email': $('#email').val(),
             'phone': $('#phone').val(),
             'academic_level': $('#academic-level').val(),
-            'gender': $("#other").is(':checked') ? $("#other-gender").val() : $("input[name=gender]:checked").val(),
+            'gender': $("#other-gender-radio").is(':checked') ? $("#other-gender").val() : $("input[name=gender]:checked").val(),
+            'heard': heard,
             'race': $('#race').val(),
             'roles': $('#roles').val(),
             'news': $('#news').val()
@@ -41,8 +55,23 @@ $(window).ready(function() {
             }
         });
 	
-	setTimeout(function () {
-		$('#response-container').show().addClass('animated bounceIn');
-	}, 500);
+        setTimeout(function () {
+            $('#response-container').show().addClass('animated bounceIn');
+        }, 500);
+    });
+    
+    $('#other-gender').click(function() {
+        
+        $("#other-gender-radio").prop("checked", true);
+    });
+    
+    $('#other-heard').click(function() {
+        
+        $("#other-heard-radio").prop("checked", true);
+    });
+    
+    $('#talk-class').click(function() {
+        
+        $("#talk-radio").prop("checked", true);
     });
 });
