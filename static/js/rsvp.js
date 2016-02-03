@@ -34,9 +34,9 @@ $(window).ready(function() {
         if ($("#other-heard-radio").is(':checked')) {
             
             heard = $("#other-heard").val();
-        }  else if ($("#talk").is(':checked')) {
+        }  else if ($("#talk-radio").is(':checked')) {
             
-            heard = $('#talk-class').val();
+            heard = 'talk:' + $('#talk-class').val();
         } else {
             
             heard = $("input[name=heard]:checked").val();

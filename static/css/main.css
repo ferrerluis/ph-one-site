@@ -1,11 +1,11 @@
 @font-face {
-    font-family: "Zona Pro Thin";
-    src: url("../fonts/ZonaProThin.otf");
+    font-family: "Museo Thin";
+    src: url("../fonts/MuseoThin.otf");
 }
 
 @font-face {
-    font-family: "Zona Pro Bold";
-    src: url("../fonts/ZonaProBold.otf");
+    font-family: "Museo Bold";
+    src: url("../fonts/MuseoBold.otf");
 }
 
 html {
@@ -20,7 +20,7 @@ body {
     height: 100%;
 	background-color: #303037;
     font-size: 1rem;
-    font-family: "Zona Pro Thin";
+    font-family: "Museo Thin";
     color: #fffdfb;
     margin: 0;
 }
@@ -28,7 +28,7 @@ body {
 h1, h2, h3, h4 {
     
     text-align: center;
-    font-family: "Zona Pro Bold";
+    font-family: "Museo Bold";
 }
 
 h1, h2 {
@@ -39,7 +39,7 @@ h1, h2 {
 
 h2 {
     
-    font-family: "Zona Pro Thin";
+    font-family: "Museo Thin";
 }
 
 .screen {
@@ -96,7 +96,7 @@ h2 {
     
     text-decoration: none;
     display: inline-block;
-    font-family: "Zona Pro Thin";
+    font-family: "Museo Thin";
     letter-spacing: 0.3rem;
     margin: 2rem 0 0 0;
     padding: 0.2rem 0.6rem;
@@ -126,7 +126,12 @@ b {
 
 .content-title {
     
-    margin-top: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+}
+
+.content-info>p:last-child {
+    
     margin-bottom: 0;
 }
 
@@ -146,7 +151,7 @@ b {
     
     letter-spacing: 0.1rem;
     padding: 0.1rem 0.2rem;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .button:hover {
@@ -194,7 +199,7 @@ input[type="text"] {
  
     height: 1rem;
     font-size: 1rem;
-    font-family: "Zona Pro Thin";
+    font-family: "Museo Thin";
     width: 100%;
     border: 0.2rem solid white;
     border-radius: 0.2rem;
@@ -242,7 +247,7 @@ label {
 
 label.title {
     
-    font-family: "Zona Pro Bold";    
+    font-family: "Museo Bold";    
 }
 
 .radio-item {
@@ -272,7 +277,6 @@ hr {
 
 #response-container {
     
-    width: 100%;
     text-align: center;
     display: block;
     position: absolute;
@@ -285,4 +289,9 @@ hr {
 #response-container>p {
     
     text-align: center;    
+}
+
+#response-title, #response-details {
+    
+    width: 100%;
 }

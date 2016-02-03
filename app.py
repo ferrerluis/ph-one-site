@@ -45,6 +45,9 @@ def rsvp():
 		if not roles_info:
 			abort(400, 'Select at least one role')
 
+		if 'heard' not in member_info.keys():
+			abort(400, 'Select an option for "Where did you learn about us"')
+
 		try:
 			member = Member.create(**member_info)
 			roles = [Role.create(name=name, member=member) for name in roles_info]
