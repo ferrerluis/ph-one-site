@@ -16,11 +16,13 @@ html {
 
 body {
 	
+    position: absolute;
     height: 100%;
 	background-color: #303037;
     font-size: 1rem;
     font-family: "Zona Pro Thin";
     color: #fffdfb;
+    margin: 0;
 }
 
 h1, h2, h3, h4 {
@@ -278,4 +280,9 @@ hr {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+}
+
+#response-container>p {
+    
+    text-align: center;    
 }

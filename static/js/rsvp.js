@@ -3,7 +3,14 @@ $(window).ready(function() {
     $('#rsvp-form').submit(function (e) {
         e.preventDefault();
         var container = $('#rsvp-container');
-        container.addClass('animated bounceOut');
+        
+        $('body').animate({
+            scrollTop: $("body").offset().top
+        }, 500);
+        
+        setTimeout(function() {
+            container.addClass('animated bounceOut');
+        }, 500);
         
         setTimeout(function() {
             container.hide();
@@ -42,7 +49,6 @@ $(window).ready(function() {
             dataType: 'json',
             contentType: "application/json; charset=utf-8",
             success: function(resp) {
-                console.log(resp)                
                 $('#response-title').addClass('blue').html('SUCCESS');
                 $('#response-details').html('You have successfully RSVPed.<br>See you at the meeting!');
             },
@@ -57,7 +63,7 @@ $(window).ready(function() {
 	
         setTimeout(function () {
             $('#response-container').show().addClass('animated bounceIn');
-        }, 500);
+        }, 2000);
     });
     
     $('#other-gender').click(function() {

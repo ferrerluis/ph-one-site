@@ -19,7 +19,7 @@ $(window).ready(function() {
         
         $('#arrow').addClass('animate flash');
         
-        $('html, body').animate({
+        $('body').animate({
             scrollTop: $("#content").offset().top
         }, 500);
     });
