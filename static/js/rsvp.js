@@ -1,20 +1,32 @@
+function showResponse(time) {
+    
+    setTimeout(function () {
+            $('#response-container').show().addClass('animated bounceIn');
+        }, time);
+}
+
+function animateForm(time) {
+    
+    $('body').animate({
+            scrollTop: $("body").offset().top
+        }, time);
+        
+        setTimeout(function() {
+            container.addClass('animated bounceOut');
+        }, time);
+        
+        setTimeout(function() {
+            container.hide();
+        }, time + 500);
+}
+
 $(window).ready(function() {
    
     $('#rsvp-form').submit(function (e) {
         e.preventDefault();
         var container = $('#rsvp-container');
         
-        $('body').animate({
-            scrollTop: $("body").offset().top
-        }, 500);
-        
-        setTimeout(function() {
-            container.addClass('animated bounceOut');
-        }, 500);
-        
-        setTimeout(function() {
-            container.hide();
-        }, 1000);
+        animateForm(500);
         
         var heard = '';
         
@@ -61,9 +73,7 @@ $(window).ready(function() {
             }
         });
 	
-        setTimeout(function () {
-            $('#response-container').show().addClass('animated bounceIn');
-        }, 2000);
+        showResponse(2000);
     });
     
     $('#other-gender').click(function() {
