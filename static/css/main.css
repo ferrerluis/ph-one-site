@@ -210,6 +210,11 @@ input[type="checkbox"] {
     margin-bottom: 2rem;
 }
 
+input[type="radio"] {
+
+	margin-right: 0.4rem;
+}
+
 [class*='col-'] {
     
     float: left;
