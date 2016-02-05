@@ -24,3 +24,4 @@ class Role(BaseModel):
 class Event(BaseModel):
 	name = peewee.CharField(max_length=10)
 	device = peewee.CharField(max_length=10)
+	member = peewee.ForeignKeyField(Member)
