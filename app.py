@@ -6,6 +6,10 @@ import sys
 
 app = JsonFlask(__name__)
 
+@app.route('/favicon.ico')
+def favicon():
+	return open('static/src/icon.png').read()
+
 @app.route('/', methods=['GET'])
 def index():
 	return render_template('index.html')
