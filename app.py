@@ -63,7 +63,7 @@ def rsvp():
 		try:
 			member = Member.create(**member_info)
 			roles = [Role.create(name=name, member=member) for name in roles_info]
-			event = Event.create(name=event_info.name, device=event_info.device, member=member)
+			event = Event.create(name=event_info['name'], device=event_info['device'], member=member)
 
 		except Exception as err:
 			abort(400, str(err))
