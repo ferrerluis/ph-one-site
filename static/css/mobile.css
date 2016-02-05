@@ -1,4 +1,4 @@
-@media only screen and (min-device-width: 480px) {
+@media only screen and (min-device-width: 800px) {
     
     body {
         
@@ -39,7 +39,7 @@
     }
 }
 
-@media only screen and (max-device-width: 480px) {
+@media only screen and (max-device-width: 800px) {
     
     .col-1-2-m {
         

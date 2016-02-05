@@ -8,8 +8,6 @@ function appear(time, container) {
 
 function disappear(time, container) {
     
-    console.log($(window).scrollTop());
-    
     if ($(window).scrollTop() == 0) time = 0;
         
         $('body').animate({
@@ -31,9 +29,22 @@ $(window).ready(function() {
    
     var rsvp_form = $('#rsvp-container');
     var response = $('#response-container');
-   
-    $('#rsvp-form').submit(function (e) {
-        e.preventDefault();
+    var event = 'main';
+    
+    if ($(window).width() < 800) {
+        
+        var device = 'mobile';
+    } else {
+        
+        var device = 'pc';
+    }
+       
+    $('#rsvp-form').submit(function(e) {
+       
+       e.preventDefault(); 
+    });
+       
+    $('#submit-rsvp-button').click(function () {
         
         disappear(400, rsvp_form);
         
@@ -60,8 +71,11 @@ $(window).ready(function() {
             'heard': heard,
             'race': $('#race').val(),
             'roles': $('#roles').val(),
-            'news': $('#news').val()
+            'news': $('#news').val(),
+            'event': {'name': event, 'device': device}
         }
+        
+        console.log(form_info);
         
         $.ajax({
             url: './rsvp',
@@ -74,8 +88,6 @@ $(window).ready(function() {
                 $('#response-details').html('You have successfully RSVPed.<br>See you at the meeting!');
             },
             error: function(resp) {
-                console.log(JSON.parse(resp.responseText).description);
-                console.log(resp)
                 $('#response-title').addClass('red').html('OOPS! SOMETHING WENT WRONG.');
                 $('#response-details').html('Error: ' + JSON.parse(resp.responseText).description +
                 '<br><br>If the error persists, please email <a href="mailto:hello@pantherhackers.com">hello@pantherhackers.com<a>.'); 
@@ -104,5 +116,24 @@ $(window).ready(function() {
         
         disappear(500, response);
         appear(1500, rsvp_form);
+    });
+    
+    var button_main = $('#button-main');
+    var button_recap = $('#button-recap');
+    
+    button_main.click(function() {
+        
+        button_main.addClass('blue');
+        button_recap.removeClass('red');
+        
+        event = 'main';
+    });
+    
+    button_recap.click(function() {
+       
+        button_recap.addClass('red'); 
+        button_main.removeClass('blue');       
+       
+       event = 'recap'
     });
 });
