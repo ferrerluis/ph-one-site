@@ -205,6 +205,11 @@ b {
     margin: 1.5rem auto;    
 }
 
+.form-section:last-of-type {
+    
+    margin-bottom: 0;
+}
+
 a {
 
     color: #fffdfb;
