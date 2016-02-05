@@ -14,6 +14,12 @@ def favicon():
 def index():
 	return render_template('index.html')
 
+@app.route('/counter', methods=['GET'])
+def counter():
+	main_count = Event.select().where(Event.name == 'main').count()
+	recap_count = Event.select().where(Event.name == 'recap').count()
+	return render_template('count.html', main_count=main_count, recap_count=recap_count)
+
 @app.route('/rsvp', methods=['POST', 'GET'])
 def rsvp():
 	method = request.method

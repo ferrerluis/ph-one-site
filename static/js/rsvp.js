@@ -74,9 +74,7 @@ $(window).ready(function() {
             'news': $('#news').val(),
             'event': {'name': event, 'device': device}
         }
-        
-        console.log(form_info);
-        
+                
         $.ajax({
             url: './rsvp',
             type: 'POST',
@@ -88,9 +86,25 @@ $(window).ready(function() {
                 $('#response-details').html('You have successfully RSVPed.<br>See you at the meeting!');
             },
             error: function(resp) {
+                
+                var email_subj = 'Form%20Error';
+                var error_msg = JSON.parse(resp.responseText).description;
+                var separator = '----------------------';
+                var info = '';
+                
+                for (var key in form_info) {
+                    if (form_info.hasOwnProperty(key)) {
+                        
+                        info += key + ':%20' + form_info[key] + '%0D%0A';
+                    }
+                }
+                
+                console.log(info);
+                
                 $('#response-title').addClass('red').html('OOPS! SOMETHING WENT WRONG.');
-                $('#response-details').html('Error: ' + JSON.parse(resp.responseText).description +
-                '<br><br>If the error persists, please email <a href="mailto:hello@pantherhackers.com">hello@pantherhackers.com<a>.'); 
+                $('#response-details').html('Error: ' + error_msg +
+                '<br><br>If the error persists, please email <a href="mailto:help@pantherhackers.com?subject='
+                + email_subj + '&body=%0D%0A%0D%0AError:%20' + error_msg + '%0D%0A' + separator + '%0D%0A' + info + '" target="_blank">help@pantherhackers.com<a>.'); 
             }
         });
 	

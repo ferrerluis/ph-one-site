@@ -155,13 +155,13 @@ b {
 .button.red, #button-recap:hover {
 
     border: 0.2rem solid #ea6778;
-    background: #ea6778;
+    background-color: #ea6778;
 }
 
 .button.blue, #button-main:hover {
 
     border: 0.2rem solid #5bc9f4;
-    background: #5bc9f4;
+    background-color: #5bc9f4;
 }
 
 .button.small {
