@@ -1,33 +1,41 @@
-function showResponse(time) {
+function appear(time, container) {
     
     setTimeout(function () {
-            $('#response-container').show().addClass('animated bounceIn');
-        }, time);
+        container.removeClass('animated fadeOut');
+        container.show().addClass('animated fadeIn');
+    }, time);
 }
 
-function animateForm(time) {
+function disappear(time, container) {
     
-    var container = $('#rsvp-container');
+    console.log($(window).scrollTop());
+    
+    if ($(window).scrollTop() == 0) time = 0;
         
-    $('body').animate({
-        scrollTop: $("body").offset().top
-    }, time);
-        
+        $('body').animate({
+            scrollTop: $("body").offset().top
+        }, time);
+    
     setTimeout(function() {
-        container.addClass('animated bounceOut');
-    }, time);
         
-    setTimeout(function() {
-        container.hide();
-    }, time + 500);
+        container.removeClass('animated fadeOut');        
+        container.addClass('animated fadeOut');
+        
+        setTimeout(function() {
+            container.hide();
+        }, 500);
+    }, time);
 }
 
 $(window).ready(function() {
    
+    var rsvp_form = $('#rsvp-container');
+    var response = $('#response-container');
+   
     $('#rsvp-form').submit(function (e) {
         e.preventDefault();
         
-        animateForm(500);
+        disappear(400, rsvp_form);
         
         var heard = '';
         
@@ -74,7 +82,7 @@ $(window).ready(function() {
             }
         });
 	
-        showResponse(2000);
+        appear(2000, response);
     });
     
     $('#other-gender').click(function() {
@@ -90,5 +98,11 @@ $(window).ready(function() {
     $('#talk-class').click(function() {
         
         $("#talk-radio").prop("checked", true);
+    });
+    
+    $('#repeat-symbol').click(function() {
+        
+        disappear(500, response);
+        appear(1500, rsvp_form);
     });
 });

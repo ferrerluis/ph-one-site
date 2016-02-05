@@ -71,11 +71,22 @@ h2 {
 
 #arrow-down {
     
+    font-size: 4rem;
     position: relative;    
     display: block;
     text-align: center;
-    font-size: 4rem;
     top: 65%;
+}
+
+#repeat-symbol {
+    
+    font-size: 3rem;
+}
+
+.symbol:hover {
+    
+    cursor: pointer;
+    color: #5bc9f4;
 }
 
 #content {
@@ -106,12 +117,6 @@ h2 {
     color: #fffdfb;
 }
 
-p {
-    
-    line-height: 1.5rem;
-    text-align: justify;
-}
-
 b {
     
     color: #ea6778;
@@ -121,13 +126,19 @@ b {
     
     display: block;
     margin: 0 auto;
-    width: 95%;
+    width: 90%;
 }
 
 .content-title {
     
     margin-top: 1.5rem;
     margin-bottom: 0;
+}
+
+.content-info p {
+    
+    line-height: 1.5rem;
+    text-align: justify;
 }
 
 .content-info>p:last-child {
@@ -183,7 +194,7 @@ h1.blue {
 
 #logo {
 	
-    max-width: 90% !important;
+    max-width: 90%;
     display: block;
     margin: 0 auto;
 }
@@ -197,7 +208,6 @@ h1.blue {
 
 input[type="text"] {
  
-    height: 1rem;
     font-size: 1rem;
     font-family: "Museo Thin";
     width: 100%;
@@ -238,12 +248,13 @@ input[type="radio"] {
     width: 33.33%;
 }
 
-select {    
+select {
+
+    font-family: "Museo Thin";
     width: 100%;
     border: 0;
-	font-size:.9em;
+	font-size: 1rem;
     border-radius: 0;
-    min-height: 26px;
 }
 
 label {
