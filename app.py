@@ -28,6 +28,8 @@ def rsvp():
 		return render_template('rsvp.html')
 
 	elif method == 'POST':
+		abort(400, 'MeetingOne has already passed. Registrations are closed.<br>For information on PantherHackers, please visit our website and sign up for our news letter in <a href="http://pantherhackers.com/news/">our website</a>.')
+		
 		json = request.get_json(force=True)
 		print json
 

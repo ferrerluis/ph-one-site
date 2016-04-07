@@ -102,9 +102,7 @@ $(window).ready(function() {
                 console.log(info);
                 
                 $('#response-title').addClass('red').html('OOPS! SOMETHING WENT WRONG.');
-                $('#response-details').html('Error: ' + error_msg +
-                '<br><br>If the error persists, please email <a href="mailto:help@pantherhackers.com?subject='
-                + email_subj + '&body=%0D%0A%0D%0AError:%20' + error_msg + '%0D%0A' + separator + '%0D%0A' + info + '" target="_blank">help@pantherhackers.com<a>.'); 
+                $('#response-details').html(String(error_msg));
             }
         });
 	
